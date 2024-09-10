@@ -15,5 +15,5 @@ func main() {
   done := make(chan bool)
   go consumer.Consumer("go-queue", "go-consumer", handler)
   log.Printf(" [*] Waiting for messages. To exit press CTRL+C")
-  <-done // Block forever
+  <-done
 }
