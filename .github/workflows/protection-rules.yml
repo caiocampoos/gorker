@@ -9,4 +9,4 @@ jobs:
   enforce-branch-protection:
     uses: caiocampoos/.github/.github/workflows/branch-protection.yml@main
     secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.PROTECTION_GH_ACTION }}
