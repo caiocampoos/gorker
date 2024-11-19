@@ -1,0 +1,12 @@
+name: 'Use Branch Protection Workflow'
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  enforce-branch-protection:
+    uses: caiocampoos/.github/.github/workflows/branch-protection.yml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
